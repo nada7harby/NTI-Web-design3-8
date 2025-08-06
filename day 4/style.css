@@ -1,0 +1,45 @@
+body {
+  height: 1500px;
+  background: linear-gradient(to bottom, rgb(229, 225, 225), blue);
+}
+
+.paret {
+  background-color: rgb(13, 108, 176);
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  border-radius: 10px;
+  position: sticky;
+  top: 20px;
+}
+.paret2 {
+  background-color: rgb(2, 21, 35);
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  border-radius: 10px;
+  position: sticky;
+  top: 0;
+}
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(213, 70, 70);
+  border-radius: 20px;
+  /* position: sticky; */
+  top: 20px;
+  right: 10px;
+  z-index: -11;
+  padding: 10px;
+}
+span {
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+}
+p {
+  position: relative;
+  z-index: -10;
+}
