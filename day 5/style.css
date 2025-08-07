@@ -1,0 +1,130 @@
+.child {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(137, 82, 15);
+  border-radius: 10px;
+}
+
+.child:hover {
+  background-color: blueviolet;
+  /* width: 200px;
+      height: 200px; */
+  border-radius: 20px;
+}
+a {
+  font-size: 30px;
+}
+
+a:visited {
+  color: brown;
+}
+a:hover {
+  background-color: blue;
+}
+input {
+  width: 50%;
+  transition-delay: 1s;
+}
+input:focus {
+  background-color: rgb(179, 105, 16);
+  color: brown;
+}
+
+input:disabled {
+  background-color: blue;
+  width: 50%;
+  margin: 10px;
+}
+
+input {
+  accent-color: rgb(0, 42, 255);
+}
+input:checked {
+  accent-color: red;
+}
+
+/* .parent p:first-child {
+  background-color: blueviolet;
+  font-size: 20px;
+} */
+
+/* .parent :last-child {
+  background-color: rgb(20, 244, 162);
+} */
+/* .parent :nth-child(even) {
+  background-color: brown;
+} */
+.parent {
+}
+.parent::after {
+  content: "after";
+  background-color: antiquewhite;
+  transition-duration: 0.5s;
+}
+
+.parent::before {
+  content: "before";
+  width: 50%;
+  position: absolute;
+}
+/* 
+.p1::first-line {
+  background-color: blueviolet;
+  font-size: 30px;
+} */
+/* 
+.p1::first-letter {
+  font-size: 50px;
+  color: blue;
+} */
+
+*::selection {
+  background-color: rgb(250, 18, 25);
+}
+
+.parent::selection {
+  background-color: blueviolet;
+}
+
+.parent {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  /* transition-duration: 2s;
+transition-property:all ;
+transition-delay: .5s; */
+  transition: all 0.5s;
+}
+/* .parent:hover {
+  background-color: blueviolet;
+  border-radius: 20px;
+  border: 5px solid;
+  width: 100%;
+} */
+
+.parent:hover::after {
+  background-color: brown;
+}
+.span1 {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.span1::after {
+  content: "";
+  width: 5px;
+  height: 0px;
+  background-color: rgb(21, 4, 37);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  
+}
+.span1:hover::after{
+      height: 100%;
+}
