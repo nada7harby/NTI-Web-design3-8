@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+img {
+  width: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 20px 1px rgba(128, 128, 128, 0.622);
+}
+header a {
+  text-decoration: none;
+  color: rgb(1, 28, 81);
+  font-size: 18px;
+  margin: 0 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background-color: blueviolet;
+  height: 3px;
+  width: 0;
+  transition: 0.5s;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+header a:hover {
+  color: blueviolet;
+}
+
+.child1 {
+  display: flex;
+  background: linear-gradient(to right, rgba(137, 43, 226, 0.181), #fff);
+  padding: 20px 10px;
+}
+
+.child1 div:nth-child(1) {
+  width: 60%;
+}
+.child1 div:nth-child(2) {
+  width: 50%;
+}
+
+.first h1 {
+  font-size: 50px;
+  color: transparent;
+  background: linear-gradient(to right, rgba(71, 4, 133, 0.904), #e841ee);
+  background-clip: text;
+
+  margin: 20px 0;
+}
+.first p {
+  padding: 15px 0;
+  color: gray;
+}
+.first button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s;
+}
+
+.first button:nth-child(1) {
+  position: relative;
+  background-color: rgb(7, 33, 111);
+  color: #fff;
+  overflow: hidden;
+}
+.first button:nth-child(2) {
+  background-color: #fff;
+  border: 2px solid rgb(7, 33, 111);
+}
+
+.first button:nth-child(2):hover {
+  background-color: rgb(7, 33, 111);
+  color: #fff;
+}
+
+.first button:nth-child(1)::after {
+  content: "";
+  background-color: #b2acac5f;
+  position: absolute;
+  width: 0%;
+  height: 100px;
+  left: 0px;
+  bottom: 0px;
+  transition: 0.3s;
+}
+
+.first button:nth-child(1):hover::after {
+  width: 100%;
+}
+
+.child2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  align-content: space-evenly;
+  height: 700px;
+}
+.child2 div {
+  background-color: #94bae263;
+  border-radius: 15px;
+  width: 25%;
+  box-shadow: 1px 1px 20px 1px rgba(128, 128, 128, 0.237);
+  padding: 20px 10px;
+  /* margin: 10px 0; */
+  position: relative;
+  overflow: hidden;
+}
+
+.child2 div h2 {
+  margin: 10px 0;
+  font-size: 35px;
+}
+.child2 div button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s;
+  background-color: #e841ee;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.child2 div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom, rgb(215, 19, 202), rgb(138, 16, 213));
+  width: 3px;
+  height: 0;
+  transition: 0.5s;
+}
+.child2 div:hover::before {
+  height: 100%;
+}
