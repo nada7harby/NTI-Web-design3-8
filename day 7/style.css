@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", -apple-system, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 20px 1px rgba(128, 128, 128, 0.375);
+  background-color: transparent;
+  /* position: sticky; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header h1 {
+  transition: 0.5s;
+}
+header h1:hover {
+  color: blueviolet;
+}
+header ul li {
+  margin: 0 10px;
+  font-size: 22px;
+  position: relative;
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 7px 15px;
+  z-index: 2;
+  overflow: hidden;
+}
+header ul li:hover {
+  color: aliceblue;
+}
+header ul li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, rgb(234, 48, 210), rgb(165, 7, 222));
+  transition: 0.5s;
+  z-index: -1;
+}
+
+header ul li:hover::before {
+  width: 100%;
+  /* right: auto; */
+  /* left: 0; */
+  right: 100%;
+}
+
+.child1 {
+  height: 700px;
+  background-color: rgba(215, 214, 214, 0.203);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.child1::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: radial-gradient(
+    circle,
+    rgba(124, 35, 208, 0.47) 0%,
+    transparent 95%
+  );
+  width: 50%;
+  height: 150%;
+  animation-name: rotated;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes rotated {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.child1 h1 {
+  font-size: 70px;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    rgb(101, 7, 108) 20%,
+    rgb(244, 89, 233)
+  );
+  background-clip: text;
+  margin-bottom: 30px;
+}
+
+.child1 p {
+  font-size: 25px;
+  color: gray;
+  width: 70%;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+
+.child1 button {
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-left: 10px;
+  font-size: 20px;
+  border: 2px solid rgb(84, 6, 110);
+  background-color: transparent;
+  transition: 0.5s;
+  color: rgb(84, 6, 110);
+}
+
+.child1 button:nth-child(1) {
+  background-color: rgb(84, 6, 110);
+  color: aliceblue;
+}
+
+.child1 button:nth-child(2):hover {
+  background-color: rgb(84, 6, 110);
+  color: aliceblue;
+}
+
+.child1 i {
+  transition: 0.5s;
+}
+.child1 button:hover i {
+  transform: rotate(180deg);
+}
+
+.child2 {
+  padding: 20px;
+}
+
+.child2 > h1 {
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+}
+
+.child2 > h1::after {
+  content: "";
+  position: absolute;
+  left: 45%;
+  bottom: -5px;
+  background: linear-gradient(to right, rgb(83, 3, 78), rgb(230, 112, 222));
+  width: 100px;
+  height: 5px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.child2 > h1:hover::after {
+  transform: scaleX(2);
+}
+.parent {
+  display: flex;
+  justify-content: flex-start space-around;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  height: 600px;
+  align-content: space-evenly;
+}
+
+.parent div {
+  margin-right: 20px;
+  border-radius: 10px;
+  width: 450px;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 20px 1px rgba(128, 128, 128, 0.389);
+}
+
+.parent div i {
+  background: linear-gradient(45deg, rgb(234, 48, 210), rgb(165, 7, 222));
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 40px;
+  transition: 0.5s;
+}
+.parent h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.parent p {
+  color: gray;
+  padding-bottom: 20px;
+}
+
+.parent div:hover i {
+  transform: rotateY(-180deg);
+}
+img {
+  width: 100%;
+}
+.child3 {
+  display: flex;
+}
+
+.child3 > div {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 1px rgba(19, 14, 14, 0.241);
+  overflow: hidden;
+  position: relative;
+}
+.child3 > div div {
+  position: absolute;
+  bottom: -100px;
+  background-color: rgba(0, 0, 0, 0.69);
+  width: 100%;
+  padding: 20px;
+  color: aliceblue;
+  transition: 0.8s;
+}
+
+.child3 > div:hover div {
+  bottom: 0;
+}
+
+.child3 img {
+  transition: 1s;
+  transform: translate(0, 0);
+}
+.child3 > div:hover .gallery-img1 {
+  transform: translate(50px, -50px);
+}
+
+.child3 > div:hover .gallery-img2 {
+  transform: rotate(-20deg) scale(1.5);
+}

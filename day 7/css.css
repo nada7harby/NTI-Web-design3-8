@@ -1,0 +1,35 @@
+body {
+  padding: 70px;
+}
+
+.child {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  transition: 1s;
+  position: relative;
+  animation-name: x;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+.child1:hover {
+  /* transform: translate(100px, 100px); */
+}
+
+@keyframes x {
+  0% {
+    background-color: red;
+    transform: translate(0);
+  }
+50%{
+                background-color: red;
+    transform: translate(300px);
+}
+  100% {
+    background-color: blue;
+    transform: translate(0);
+  }
+}
